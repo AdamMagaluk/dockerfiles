@@ -11,8 +11,8 @@ Pull image and configure:
  - SSH key location has already been specified (this is intentional)
 
 ```bash
-$ docker pull weisjohn/gitlab-ci-runner
-$ docker run -i -t weisjohn/gitlab-ci-runner /gcr/bin/install
+$ docker pull adammagaluk/ifxbase
+$ docker run -i -t adammagaluk/ifxbase /gcr/bin/install
 Please type gitlab-ci url (Ex. http://gitlab-ci.org:3000/ )
 http://192.168.1.1:8080/
 Generating public/private rsa key pair.
@@ -59,7 +59,7 @@ Once the install is finished, Docker will close the process.  Now, you need to c
 ```bash
 $ docker ps -a | head -n 2
 ID                  IMAGE                              COMMAND                CREATED             STATUS              PORTS
-50a2e96272af        weisjohn/gitlab-ci-runner:latest   /gcr/bin/install       40 seconds ago      Exit 0
+50a2e96272af        adammagaluk/ifxbase:latest   /gcr/bin/install       40 seconds ago      Exit 0
 ```
 
 The "50a2e96272af" is the ID of the container that was just installed.  To use it, you want to commit it to a named container. You should pick some sort of name like gitlab-ci-runner
